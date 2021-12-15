@@ -18,7 +18,7 @@ CFLAGS =	-Wall -Wextra -Werror
 
 all :		${NAME}
 
-bonus : ${CHECK}
+bonus :		${CHECK}
 
 ${NAME} :	${OBJ}
 		${MAKE} -C ./libft
