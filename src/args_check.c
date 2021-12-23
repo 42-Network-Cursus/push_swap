@@ -15,8 +15,14 @@
 int	ft_args_check(int argc, char **argv)
 {
 	int		i;
+	int		j;
 
 	i = 1;
+	j = 0;
+	while (argv[j])
+		j++;
+	if (j == 1)
+		return (-1);
 	while (argv[i] && argc > 1)
 	{
 		if (!ft_isnum(argv[i]))

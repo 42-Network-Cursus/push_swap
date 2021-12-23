@@ -19,6 +19,10 @@ int	main(int argc, char **argv)
 
 	if (argc < 2)
 		return (1);
+	if (argc == 2)
+		argv = ft_split(argv[1], ' ');
+	if (ft_args_check(argc, argv) == -1)
+		return (1);
 	if (ft_args_check(argc, argv))
 		return (write(1, "Error\n", 6));
 	a = malloc(sizeof(t_list));

@@ -11,6 +11,6 @@
 # **************************************************************************** #
 
 #!/bin/bash
- args=""; #Insert numbers here
- ./push_swap $args | ./checker_Mac $args
- ./push_swap $args | ./checker $args
+ args="1 3 2"; #Insert numbers here
+ ./push_swap $args | ./checker_Mac $args 
+ ./push_swap $args | ./checker $args #Bonus

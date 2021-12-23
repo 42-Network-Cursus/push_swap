@@ -64,14 +64,14 @@ static int	op_tree(char *cmd, t_list **a, t_list **b)
 	return (-1);
 }
 
-static void	ft_result(t_list **a, t_list **b, char **ptr_cmd)
+static int	ft_result(t_list **a, t_list **b, char **ptr_cmd)
 {
 	if (is_sorted(*a, *b))
 		write(1, "OK\n", 3);
 	else
 		write(1, "KO\n", 3);
 	ft_free_checker(a, b, ptr_cmd);
-	return ;
+	return (0);
 }
 
 int	main(int argc, char **argv)
@@ -100,6 +100,5 @@ int	main(int argc, char **argv)
 		free(cmd);
 		cmd = get_next_line(0);
 	}
-	ft_result(a, b, &cmd);
-	return (0);
+	return (ft_result(a, b, &cmd));
 }
